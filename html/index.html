@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>云</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+    <!-- 项目开始 -->
+    <div class="wrap">
+        <!-- 外边框 -->
+        <div class="layout-wrapper">
+            <!-- 顶部导航 -->
+            <div class="layout-header">
+                <!-- 导航主体 -->
+                <div class="layout-header-content">
+                    <div class="nav-bar clearfix">
+                        <!-- logo -->
+                        <div class="logo">
+                            <a href="javascript:void(0);"></a>
+                        </div>
+                        <!-- 任务列表 -->
+                        <div id="filebtn" class="mode-act hide">
+                            <!-- 展开任务列表按钮 -->
+                            <a id="mode-act" href="javascript:" class="act-link">
+                                <span class="act-icon">
+                                    <i class="iconfont icon icon-act">&#xe63c;</i>
+                                </span>
+                                <!-- 上传的个数 -->
+                                <span class="act-num">
+                                    <span class="num">2</span>
+                                    <i title="任务出错" class="icon icon-error"></i>
+                                </span>
+
+                            </a>
+                            <!-- 上传任务列表 -->
+                            <div id="mode-list">
+                                <div class="mode-tasks">
+                                    <div class="tasks-header clearfix">
+                                        <div class="title-wrapper clearfix">
+                                            <h2 class="title">任务列表</h2>
+                                        </div>
+                                    </div>
+                                    <div class="tasks-body">
+                                        <div class="tasks-content">
+                                            <!-- tab -->
+                                            <div class="mode-tab-list">
+                                                <ul class="tab-list">
+                                                    <li class="tab-list-item cur">
+                                                        <span class="tab-list-item-con ">进行中(0)</span>
+                                                    </li>
+                                                    <li class="tab-list-item">
+                                                        <span class="tab-list-item-con">已完成 </span>
+                                                    </li>
+                                                </ul>
+                                                <b class="tab-list-line"></b>
+                                            </div>
+                                            <!-- item-list -->
+                                            <div id="mode-tab" class="mode-tab-list-group">
+                                                <div class="tab-list-wrapper" style="display:block;"></div>
+                                                <div class="tab-list-wrapper" style="border:1px solid blue;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 搜索 -->
+                        <div class="search-bar">
+                            <div class="search">
+                                <div class="search-input">
+                                    <input id="search" class="s-input" type="text" autocomplete="off" tabindex="0" placeholder="搜索全部微云">
+                                </div>
+                                <div class="search-btn">
+                                    <i class="iconfont btn-icon">&#xe68d;</i>
+                                </div>
+                            </div>
+                            <!-- 搜索list -->
+                            <div class="search-list">
+                                <div class="search-menu">
+                                    <div class="menu-group">
+                                        <p class="tit">搜搜看</p>
+
+                                    </div>
+                                </div>
+                                <div class="search-menu">
+                                    <div class="menu-group">
+                                        <p class="tit">历史记录</p>
+                                        <div class="menu-act">
+                                            <a class="menu-act-btn" href="javascript:">清除记录</a>
+                                        </div>
+                                    </div>
+                                    <div class="menu-list-bar">
+                                        <ul class="menu-list">
+                                            <!-- <li class="menu-list-item">
+                                                <span class="item-text">sss</span>
+                                                <span title="删除" class="item-delate">
+                                                    <i class="iconfont icon-delate">&#xe64e;</i>
+                                                </span>
+                                            </li>
+                                            <li class="menu-list-item">
+                                                    <span class="item-text">sss</span>
+                                                    <span title="删除" class="item-delate">
+                                                        <i class="iconfont icon-delate">&#xe64e;</i>
+                                                    </span>
+                                                </li> -->
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 右侧菜单 -->
+                        <div class="menu-right-bar">
+                            <div class="right-item item-act">
+                                <div class="item-text">
+                                    <a href="javascript:">开会员最多送一年</a>
+                                </div>
+                            </div>
+                            <div class="right-item item-act-dwn">
+                                <div class="item-text">
+                                    <a href="javascript:">下载客户端</a>
+                                </div>
+                            </div>
+                            <div class="right-item">
+                                <div class="item-text">
+                                    <a href="javascript:">
+                                        嘿魅
+                                        <i class="iconfont">&#xe619;</i>
+                                    </a>
+                                </div>
+                                <!-- 个人信息展示 -->
+                                <div class="item-btn-group" style="display: none;">
+                                    <div class="info-bar">
+                                        <div class="info-bar-hd">
+                                            <p class="tit">
+                                                <a class="name" href="javascript:">嘿魅</a>
+                                            </p>
+                                        </div>
+                                        <div class="info-bar-bd">
+                                            <div class="info-con">
+                                                <a class="info-vip" href="javascript:">
+                                                    <i>VIP</i>
+                                                </a>
+                                                <span class="info-text">
+                                                    超级会员专享4T容量
+                                                </span>
+                                                <a href="javascript:" class="info-go">开通</a>
+                                            </div>
+                                            <div class="info-detail">
+                                                <div class="info-detail-hd">
+                                                    <p class="info-detail-tit">
+                                                        容量
+                                                        <span>0B</span>
+                                                        /
+                                                        <span>10G</span>
+                                                    </p>
+                                                </div>
+                                                <div class="info-detail-bd">
+                                                    <div class="info-inner-bar">
+                                                        <div class="info-inner-cur"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <ul>
+                                        <li class="menu-list">
+                                            <div class="item-line"></div>
+                                        </li>
+                                        <li class="menu-list">
+                                            <span class="text">帮助与反馈</span>
+                                        </li>
+                                        <li class="menu-list">
+                                            <span class="text">安全与隐私</span>
+                                            <i class="iconfont menu-icon">&#xe7f1;</i>
+                                            <div class="item-btn-group item-btn-sec">
+                                                <ul>
+                                                    <li class="menu-list">
+                                                        <span class="text">开启保险箱</span>
+                                                    </li>
+                                                    <li class="menu-list">
+                                                        <span class="text">开启独立密码</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="menu-list">
+                                            <span class="text">退出登录</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 主体内容 -->
+            <div class="layout-body">
+                <!-- 主体 -->
+                <div class="layout-inner">
+                    <!-- 左侧菜单 -->
+                    <div class="layout-left-bar">
+                        <!-- 头像 -->
+                        <div class="left-hd">
+                            <div class="user-vip">
+                                <div class="user-avater">
+                                    <a href="javascript:" class="user-photo">
+                                        <img src="../img/g.jpeg" alt="嘿魅" srcset="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 菜单列表 -->
+                        <div class="left-bd">
+                            <div class="left-menu-bar">
+                                <div class="add-bar">
+                                    <a href="javascript:" class="add-btn">开通</a>
+                                </div>
+                                <div id="menu-list-bar"></div>
+                                <!-- <div class="menu-item">
+                                    <div class="menu-item-bd">
+                                        <ul class="menu-list">
+                                            <li>
+
+                                                <a href="javascript:">
+                                                    <i class="iconfont">&#xe622;</i>最近</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="menu-item">
+                                    <div class="menu-item-bd">
+                                        <ul class="menu-list">
+                                            <li class="act">
+
+                                                <a href="javascript:">
+                                                    <i class="iconfont">&#xe642;</i>全部</a>
+                                            </li>
+                                            <li>
+
+                                                <a href="javascript:">
+                                                    <i class="iconfont">&#xe613;</i>文档</a>
+                                            </li>
+                                            <li>
+
+                                                <a href="javascript:">
+                                                    <i class="iconfont">&#xe60a;</i>图片</a>
+                                            </li>
+                                            <li>
+
+                                                <a href="javascript:">
+                                                    <i class="iconfont">&#xe6d1;</i>视频</a>
+                                            </li>
+                                            <li>
+
+                                                <a href="javascript:">
+                                                    <i class="iconfont">&#xe62f;</i>音乐</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="menu-item">
+                                    <div class="menu-item-bd">
+                                        <ul class="menu-list">
+                                            <li>
+
+                                                <a href="javascript:">
+                                                    <i class="iconfont">&#xe6bd;</i>照片</a>
+                                            </li>
+                                            <li>
+
+                                                <a href="javascript:">
+                                                    <i class="iconfont">&#xe609;</i>笔记</a>
+                                            </li>
+                                            <li>
+
+                                                <a href="javascript:">
+                                                    <i class="iconfont">&#xe634;</i>保险箱</a>
+                                            </li>
+                                            <li>
+
+                                                <a href="javascript:">
+                                                    <i class="iconfont">&#xe635;</i>分享链接</a>
+                                            </li>
+                                            <li>
+
+                                                <a href="javascript:">
+                                                    <i class="iconfont">&#xe6a1;</i>回收站</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- 右侧主体 -->
+                    <div class="layout-main">
+                        <div class="layout-main-hd">
+                            <div class="main-top-bar">
+                                <div class="top-inner clearfix">
+                                    <!-- 全部check -->
+                                    <div class="inner-checkbox">
+                                        <i class="iconfont icon ">
+                                            <!--&#xe64e;-->
+                                        </i>
+                                    </div>
+                                    <!-- 添加文件夹 -->
+                                    <div class="inner-addup">
+                                        <div class="addup-btn">
+                                            <a href="javascript:" class="btn-add">
+                                                <i class="iconfont icon-add">&#xe616;</i>
+                                                <span class="add-text">添加</span>
+                                            </a>
+                                        </div>
+                                        <div class="item-btn-group addup-group" style="display:none;">
+                                            <ul>
+                                                <li class="menu-list">
+                                                    <i class="iconfont menu-icon icon-add-item">&#xe618;</i>
+                                                    <span class="text">上传文件</span>
+                                                </li>
+                                                <li class="menu-list">
+                                                    <i class="iconfont menu-icon  icon-add-item">&#xe621;</i>
+                                                    <span class="text">上传文件夹</span>
+                                                </li>
+                                                <li class="menu-list line">
+                                                    <i class="iconfont menu-icon  icon-add-item">&#xe603;</i>
+                                                    <span class="text">新建文件夹</span>
+                                                </li>
+                                                <li class="menu-list">
+                                                    <span class="text">离线下载</span>
+                                                </li>
+                                                <li class="menu-list">
+                                                    <span class="text">笔记</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- 列表展示方式 -->
+                                    <div class="inner-showfn">
+                                        <div class="showfn-bar">
+                                            <a href="javascript:" class="btn-showfn">
+                                                <i class="iconfont icon-showfn">&#xe62d;</i>
+                                                <i class="iconfont icon-showfn">&#xe619;</i>
+                                            </a>
+                                        </div>
+                                        <div class="item-btn-group showfn-group" style="display:none;">
+                                            <ul>
+                                                <li class="menu-list act">
+                                                    <i class="iconfont menu-icon icon-showfn">&#xe616;</i>
+                                                    <span class="text">列表</span>
+                                                </li>
+                                                <li class="menu-list">
+                                                    <i class="iconfont menu-icon icon-showfn">&#xe616;</i>
+                                                    <span class="text">缩略图</span>
+                                                </li>
+                                                <li class="menu-list line">
+                                                    <i class="iconfont menu-icon icon-showfn">&#xe616;</i>
+                                                    <span class="text">文件名
+                                                        <i class="iconfont menu-icon icon-showfn2">&#xe60c;</i>
+                                                    </span>
+                                                </li>
+                                                <li class="menu-list">
+                                                    <i class="iconfont menu-icon icon-showfn">&#xe616;</i>
+                                                    <span class="text">修改时间
+                                                        <i class="iconfont menu-icon icon-showfn2">&#xe60c;</i>
+                                                    </span>
+
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- 功能展开列表 -->
+                                    <div class="inner-list-item" style="display:none;">
+                                        <div class="list-item-bar">
+
+                                            <div class="item-action">
+                                                <div class="action-con">
+                                                    <i class="iconfont icon-down">&#xe6a1;</i>
+                                                    <span class="text">下载</span>
+                                                </div>
+                                            </div>
+                                            <div class="item-action">
+                                                <div class="action-con">
+                                                    <i class="iconfont">&#xe635;</i>
+                                                    <span class="text">分享</span>
+                                                </div>
+                                            </div>
+                                            <div class="item-action">
+                                                <div class="action-con">
+                                                    <i class="iconfont">&#xe6a2;</i>
+                                                    <span class="text">删除</span>
+                                                </div>
+                                            </div>
+                                            <div class="item-action">
+                                                <div class="action-con">
+                                                    <i class="iconfont">&#xe697;</i>
+                                                </div>
+                                                <div class="item-btn-group addup-group list-item-group" style="display:none;">
+                                                    <ul>
+
+                                                        <li class="menu-list">
+
+                                                            <span class="text">移动到</span>
+                                                        </li>
+                                                        <li class="menu-list">
+                                                            <span class="text">重命名</span>
+                                                        </li>
+                                                        <li class="menu-list">
+                                                            <span class="text">大大都是</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                    <!-- 标题 -->
+                                    <div class="inner-text">
+                                        <div class="text-bar">
+                                            <ul class="text clearfix">
+                                                <li class="text-item">
+                                                    <a href="javascript:">
+                                                        <i class="icon"></i>全部
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 右侧主体开始 -->
+                        <div class="layout-main-bd">
+                            <!-- 右侧列表 -->
+                            <div class="layout-main-list">
+                                <div class="main-list-item">
+                                    <!-- 列表标题 -->
+                                    <div class="list-item-hd">
+                                        <div class="item-hd-bar">
+                                            <div class="item-tit name">
+                                                <span class="tit-con">名称
+                                                    <i class="iconfont">&#xe621;</i>
+                                                </span>
+
+                                            </div>
+                                            <div class="item-tit time">
+                                                <span class="tit-con">上次修改时间
+                                                    <i class="iconfont icon-sort">&#xe60c;</i>
+                                                </span>
+
+                                            </div>
+                                            <div class="item-tit size">
+                                                <span class="tit-con">大小
+                                                    <i class="iconfont">&#xe60c;</i>
+                                                </span>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!-- 列表 -->
+                                    <div class="list-item-bd clearfix">
+                                        <div class="list-bar">
+                                            <ul class="list-group" id='contentlistbar'>
+                                                <!-- <li class="list-group-item">
+                                                    <div class="item-inner">
+                                                        <div class="list-item-tit">
+                                                            <div class="label">
+                                                                <i class="icon"></i>
+                                                            </div>
+                                                            <div class="iconw">
+                                                                <i class="iconfont iconw-img">&#xe621;</i>
+                                                            </div>
+                                                            <div class="info">
+                                                                <span>web</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="item-info">
+                                                            <span class="item-info-list">
+                                                                <span class="text-time">昨天09：46</span>
+                                                            </span>
+                                                            <span class="item-info-list">
+                                                                <span class="text-size">--</span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <div class="item-inner">
+                                                        <div class="list-item-tit">
+                                                            <div class="label">
+                                                                <i class="icon"></i>
+                                                            </div>
+                                                            <div class="iconw">
+                                                                <i class="iconfont iconw-img">&#xe621;</i>
+                                                            </div>
+                                                            <div class="info">
+                                                                <span>web</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="item-info">
+                                                            <span class="item-info-list">
+                                                                <span class="text-time">昨天09：46</span>
+                                                            </span>
+                                                            <span class="item-info-list">
+                                                                <span class="text-size">--</span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </li> -->
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../js/tween.js"></script>
+<script src="../js/commom.js"></script>
+<script src="../js/tab.js"></script>
+<script src="../js/header.js"></script>
+<script src="../js/data.js"></script>
+<script src="../js/template.js"></script>
+<script>
+    //生成左侧菜单；
+    var menuList = document.querySelector('#menu-list-bar');
+    createMenuList(menu, menuList);
+    //生成右侧内容列表
+
+    //首先页面上来有默认的显示列表；
+    var contentDefault = 'nearest';
+
+    //当前内容关键字
+    //var currMark = 'nearest';
+    //这里的mark是定死的第一层
+    var currMark = content[contentDefault];
+    console.log(currMark);
+
+    //右侧列表放置的位置
+    var listContentBar = document.querySelector('#contentlistbar');
+    createContentList(content[contentDefault], listContentBar);
+
+
+    //左侧菜单点击，右侧切换相应的内容
+    //获取左侧所有的按钮 
+    var sideMenu = document.querySelectorAll('#menu-list-bar a');
+    //根据默认数据标记当前显示的那一条菜单的内容
+    var currMarkDom = markSideMenu(sideMenu, contentDefault);
+    // console.log(currMarkDom);
+    for (var i = 0; i < sideMenu.length; i++) {
+        sideMenu[i].onclick = function () {
+
+            //拿到点击按钮的标识
+            // currMark = this.getAttribute('mark');
+            //改成存放对应mark的内容
+            currMark = content[this.getAttribute('mark')];
+            console.log(currMark);
+            //创建相应的内容
+            // createContentList(content[currMark], listContentBar);
+            createContentList(currMark, listContentBar);
+            //清空之前标记的样式
+            currMarkDom.parentNode.className = '';
+            //给当前的点击的加上标识
+            currMarkDom = markSideMenu(sideMenu, this.getAttribute('mark'));
+            addClick();
+        }
+    }
+
+
+
+
+    /**
+     * 由于右侧内容的点击事件，不止给当前的层加  所以也要生成一个方法，
+     * 每次新生成内容都要执行点击事件
+    */
+    addClick();
+    function addClick() {
+        var contentList = document.querySelectorAll('#contentlistbar li');
+        // console.log(contentList.length);
+        for (var i = 0; i < contentList.length; i++) {
+
+            contentList[i].onclick = function () {
+                console.log(this.getAttribute('mark'));
+                //点击的时候显示子文件夹下面的列表
+                //创建相应的内容
+                currMark = currMark[this.getAttribute('mark')].child;
+                console.log(currMark);
+                createContentList(currMark, listContentBar);
+                // createContentList(content[currMark][this.getAttribute('mark')].child, listContentBar);
+                addClick();
+            }
+        }
+    }
+
+
+
+    /**
+     * 
+     *标记当前显示的左侧菜单；
+     标记当前显示的是哪个菜单
+     * 
+     */
+    function markSideMenu(menuList, currName) {
+        var currDom = null;
+        for (var i = 0; i < menuList.length; i++) {
+            // console.log(menuList[i].parentNode);
+            //创建的时候给
+            if (menuList[i].getAttribute('mark') == currName) {
+                if (menuList[i].parentNode.className) {
+                    menuList[i].parentNode.className += ' act';
+                } else {
+                    menuList[i].parentNode.className = 'act';
+                }
+                currDom = menuList[i];
+                // console.log(currDom);
+                break;
+            }
+
+        }
+        return currDom;
+    }
+
+</script>
+
+</html>
